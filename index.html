@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTET गणित मॉक टेस्ट</title>
+    <meta name="description" content="CTET गणित मॉक टेस्ट - 30 प्रश्नों के साथ अभ्यास करें। समय: 30 मिनट।">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- ========================================
+         LANDING PAGE - Instructions
+         ======================================== -->
+    <div id="landing-page" class="page active">
+        <div class="landing-container">
+            <div class="landing-card">
+                <!-- Header -->
+                <div class="landing-header">
+                    <div class="logo-icon">📐</div>
+                    <h1>CTET गणित मॉक टेस्ट</h1>
+                    <p class="subtitle">CTET Mathematics Mock Test</p>
+                </div>
+
+                <!-- Test Info Box -->
+                <div class="test-info-box">
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <span class="info-label">कुल प्रश्न</span>
+                            <span class="info-value">30</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">कुल अंक</span>
+                            <span class="info-value">30</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">समय</span>
+                            <span class="info-value">30 मिनट</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">विषय</span>
+                            <span class="info-value">गणित</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Instructions -->
+                <div class="instructions-box">
+                    <h2>📋 परीक्षा निर्देश / Exam Instructions</h2>
+                    <ol class="instructions-list">
+                        <li>इस परीक्षा में कुल <strong>30 प्रश्न</strong> हैं।</li>
+                        <li>प्रत्येक प्रश्न <strong>1 अंक</strong> का है।</li>
+                        <li>परीक्षा की कुल अवधि <strong>30 मिनट</strong> है।</li>
+                        <li>प्रत्येक प्रश्न के <strong>4 विकल्प</strong> होंगे (A, B, C, D)।</li>
+                        <li>सही उत्तर के लिए <strong>1 अंक</strong> दिया जाएगा।</li>
+                        <li>गलत उत्तर के लिए <strong>कोई नकारात्मक अंकन नहीं</strong> है।</li>
+                        <li>आप किसी भी प्रश्न पर वापस जा सकते हैं और <strong>उत्तर बदल</strong> सकते हैं।</li>
+                        <li>समय समाप्त होने पर परीक्षा <strong>स्वतः जमा</strong> हो जाएगी।</li>
+                        <li>आप "परीक्षा जमा करें" बटन दबाकर किसी भी समय परीक्षा समाप्त कर सकते हैं।</li>
+                        <li>परीक्षा शुरू करने के बाद <strong>ब्राउज़र बंद न करें</strong>।</li>
+                    </ol>
+                </div>
+
+                <!-- Warning Box -->
+                <div class="warning-box">
+                    <h3>⚠️ महत्वपूर्ण सूचना</h3>
+                    <ul>
+                        <li>परीक्षा शुरू होने के बाद टाइमर चालू हो जाएगा।</li>
+                        <li>एक बार शुरू होने के बाद परीक्षा रोकी नहीं जा सकती।</li>
+                        <li>सभी प्रश्नों के उत्तर देने का प्रयास करें।</li>
+                    </ul>
+                </div>
+
+                <!-- Topics Covered -->
+                <div class="topics-section">
+                    <h3>📚 शामिल विषय</h3>
+                    <div class="topics-grid">
+                        <span class="topic-tag">संख्या पद्धति</span>
+                        <span class="topic-tag">अंकगणित</span>
+                        <span class="topic-tag">बीजगणित</span>
+                        <span class="topic-tag">ज्यामिति</span>
+                        <span class="topic-tag">आंकड़ों का प्रबंधन</span>
+                        <span class="topic-tag">क्षेत्रमिति</span>
+                        <span class="topic-tag">अनुपात और समानुपात</span>
+                    </div>
+                </div>
+
+                <!-- Candidate Name Input -->
+                <div class="name-input-box">
+                    <label for="candidate-name" class="name-label">
+                        <span class="name-icon">👤</span>
+                        अपना नाम दर्ज करें / Enter Your Name
+                    </label>
+                    <input type="text" id="candidate-name" class="name-input" placeholder="यहाँ अपना नाम लिखें..."
+                        required>
+                </div>
+
+                <!-- Checkbox Agreement -->
+                <div class="agreement-box">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="agreement-checkbox">
+                        <span class="checkmark"></span>
+                        <span class="checkbox-text">मैंने सभी निर्देश पढ़ और समझ लिए हैं</span>
+                        <span class="checkbox-text-en">(I have read and understood all instructions)</span>
+                    </label>
+                </div>
+
+                <!-- Start Button -->
+                <button id="start-test-btn" class="btn btn-start" disabled>
+                    <span>परीक्षा शुरू करें</span>
+                    <span class="btn-arrow">→</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================
+         TEST PAGE
+         ======================================== -->
+    <div id="test-page" class="page">
+        <!-- Header -->
+        <header class="test-header">
+            <div class="header-left">
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="mobile-menu-btn">
+                    <span class="hamburger-icon">☰</span>
+                    <span class="menu-text">प्रश्न सूची</span>
+                </button>
+            </div>
+            <div class="header-center">
+                <div class="timer-container">
+                    <span class="timer-label">समय शेष:</span>
+                    <span id="timer" class="timer">30:00</span>
+                </div>
+            </div>
+            <div class="header-right">
+                <button id="submit-test-btn" class="btn btn-submit">
+                    परीक्षा जमा करें
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="test-main">
+            <!-- Question Section -->
+            <section class="question-section">
+                <div class="question-header">
+                    <span id="question-number" class="question-number">प्रश्न 1 / 30</span>
+                    <span id="question-topic" class="question-topic">संख्या पद्धति</span>
+                </div>
+
+                <div class="question-content">
+                    <p id="question-text" class="question-text"></p>
+                </div>
+
+                <div id="options-container" class="options-container">
+                    <!-- Options will be dynamically generated -->
+                </div>
+
+                <div class="question-actions">
+                    <button id="clear-response-btn" class="btn btn-secondary">
+                        उत्तर साफ़ करें
+                    </button>
+                </div>
+
+                <!-- Navigation -->
+                <div class="navigation">
+                    <button id="prev-btn" class="btn btn-nav" disabled>
+                        ← पिछला प्रश्न
+                    </button>
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div id="progress-fill" class="progress-fill"></div>
+                        </div>
+                        <span id="progress-text" class="progress-text">0/30 उत्तर दिए</span>
+                    </div>
+                    <button id="next-btn" class="btn btn-nav">
+                        अगला प्रश्न →
+                    </button>
+                </div>
+            </section>
+
+            <!-- Desktop Question Palette (Sidebar) -->
+            <aside class="palette-sidebar">
+                <div class="palette-header">
+                    <h2>प्रश्न सूची</h2>
+                </div>
+                <div class="palette-legend">
+                    <div class="legend-item">
+                        <span class="legend-box answered"></span>
+                        <span>उत्तर दिया (<span id="answered-count-desktop">0</span>)</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-box not-answered"></span>
+                        <span>नहीं दिया (<span id="not-answered-count-desktop">30</span>)</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-box current"></span>
+                        <span>वर्तमान</span>
+                    </div>
+                </div>
+                <div id="question-palette-desktop" class="question-palette">
+                    <!-- Palette buttons will be dynamically generated -->
+                </div>
+            </aside>
+        </main>
+
+        <!-- Mobile Question Palette Modal -->
+        <div id="palette-modal" class="palette-modal">
+            <div class="modal-overlay"></div>
+            <div class="modal-content-palette">
+                <div class="modal-header-palette">
+                    <h2>प्रश्न सूची</h2>
+                    <button id="close-palette-btn" class="btn-close-palette">
+                        बंद करें ✕
+                    </button>
+                </div>
+                <div class="palette-legend">
+                    <div class="legend-item">
+                        <span class="legend-box answered"></span>
+                        <span>उत्तर दिया (<span id="answered-count-mobile">0</span>)</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-box not-answered"></span>
+                        <span>नहीं दिया (<span id="not-answered-count-mobile">30</span>)</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-box current"></span>
+                        <span>वर्तमान</span>
+                    </div>
+                </div>
+                <div id="question-palette-mobile" class="question-palette">
+                    <!-- Palette buttons will be dynamically generated -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================
+         SUBMIT CONFIRMATION MODAL
+         ======================================== -->
+    <div id="submit-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>⚠️ क्या आप वाकई परीक्षा जमा करना चाहते हैं?</h2>
+            </div>
+            <div class="modal-body">
+                <p id="submit-message" class="submit-message"></p>
+                <p class="modal-note">एक बार जमा करने के बाद आप उत्तर नहीं बदल पाएंगे।</p>
+            </div>
+            <div class="modal-actions">
+                <button id="cancel-submit-btn" class="btn btn-secondary">
+                    नहीं, वापस जाएं
+                </button>
+                <button id="confirm-submit-btn" class="btn btn-danger">
+                    हाँ, जमा करें
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Time Up Modal -->
+    <div id="timeup-modal" class="modal">
+        <div class="modal-content timeup-content">
+            <div class="timeup-icon">⏰</div>
+            <h2>समय समाप्त!</h2>
+            <p>आपकी परीक्षा स्वतः जमा हो रही है...</p>
+            <div class="loading-spinner"></div>
+        </div>
+    </div>
+
+    <!-- ========================================
+         RESULTS PAGE
+         ======================================== -->
+    <div id="results-page" class="page">
+        <div class="results-container">
+            <!-- Score Card -->
+            <div class="score-card">
+                <div class="score-header">
+                    <h1>🎯 परीक्षा परिणाम</h1>
+                    <p id="result-message" class="result-message"></p>
+                </div>
+
+                <div class="score-main">
+                    <div class="score-circle">
+                        <svg viewBox="0 0 100 100">
+                            <circle class="score-bg" cx="50" cy="50" r="45"></circle>
+                            <circle id="score-progress" class="score-progress" cx="50" cy="50" r="45"></circle>
+                        </svg>
+                        <div class="score-text">
+                            <span class="score-label">आपका स्कोर</span>
+                            <span id="score-value" class="score-value">0</span>
+                            <span class="score-total">/30</span>
+                        </div>
+                    </div>
+                    <div class="score-percentage">
+                        प्रतिशत: <span id="percentage-value">0</span>%
+                    </div>
+                </div>
+
+                <div class="score-breakdown">
+                    <div class="breakdown-item correct">
+                        <div class="breakdown-icon">✓</div>
+                        <div class="breakdown-info">
+                            <span id="correct-count" class="breakdown-number">0</span>
+                            <span class="breakdown-label">सही उत्तर</span>
+                        </div>
+                    </div>
+                    <div class="breakdown-item wrong">
+                        <div class="breakdown-icon">✗</div>
+                        <div class="breakdown-info">
+                            <span id="wrong-count" class="breakdown-number">0</span>
+                            <span class="breakdown-label">गलत उत्तर</span>
+                        </div>
+                    </div>
+                    <div class="breakdown-item unattempted">
+                        <div class="breakdown-icon">○</div>
+                        <div class="breakdown-info">
+                            <span id="unattempted-count" class="breakdown-number">0</span>
+                            <span class="breakdown-label">अनुत्तरित</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="time-stats">
+                    <div class="time-stat">
+                        <span class="time-label">कुल समय</span>
+                        <span id="total-time" class="time-value">00:00</span>
+                    </div>
+                    <div class="time-stat">
+                        <span class="time-label">औसत समय/प्रश्न</span>
+                        <span id="avg-time" class="time-value">00:00</span>
+                    </div>
+                </div>
+
+                <div class="result-actions">
+                    <button id="review-answers-btn" class="btn btn-primary">
+                        उत्तरों की समीक्षा करें
+                    </button>
+                    <button id="retake-test-btn" class="btn btn-secondary">
+                        फिर से प्रयास करें
+                    </button>
+                </div>
+            </div>
+
+            <!-- Detailed Analysis Cards Section -->
+            <div id="analysis-section" class="analysis-section hidden">
+                <div class="analysis-header">
+                    <h2>📊 विस्तृत विश्लेषण</h2>
+                    <button id="close-analysis-btn" class="btn btn-secondary">
+                        ← परिणाम पर वापस जाएं
+                    </button>
+                </div>
+
+                <!-- Filter Buttons -->
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">सभी (30)</button>
+                    <button class="filter-btn filter-correct" data-filter="correct">✓ सही (<span
+                            id="filter-correct-count">0</span>)</button>
+                    <button class="filter-btn filter-wrong" data-filter="wrong">✗ गलत (<span
+                            id="filter-wrong-count">0</span>)</button>
+                    <button class="filter-btn filter-unattempted" data-filter="unattempted">○ अनुत्तरित (<span
+                            id="filter-unattempted-count">0</span>)</button>
+                </div>
+
+                <!-- Analysis Cards Container -->
+                <div id="analysis-cards" class="analysis-cards">
+                    <!-- Question cards will be dynamically generated -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/questions.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
